@@ -13,12 +13,17 @@
 
 <h1>Product Reviews</h1>
 
+<div id="formId">
+    <div id="listingId" >
+<div th:each="review : ${reviewedProduct}" id="listItemId" class="listItemClass">
 
-<div>
+    Reviews: <p>[[${review.ProductReview}]]</p>
+    <div th:id="${review.title + 'Label'}" class="prefProductClass">
+</div>
+    </div>
 
-    Reviews: <p>[[${reviewedProduct.ProductReview}]]</p>
-    <div th:id="${reviewedProduct.title + 'Label'}" class="prefProductClass">
     </div>
 </div>
+
 </body>
 </html>
